@@ -12,7 +12,7 @@ void enqueue(int x){
 }
 
 int dequeue(){
-  
+  int x;
 }
 
 int main(){
