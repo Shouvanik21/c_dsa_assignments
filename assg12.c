@@ -8,7 +8,7 @@ typedef struct node{
 str *ptr,*start='\0',*front=NULL,*rear=NULL;
 
 void enqueue(int x){
-
+  node=(nn*)malloc(sizeof(nn));
 }
 
 int dequeue(){
