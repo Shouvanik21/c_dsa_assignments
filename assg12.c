@@ -11,6 +11,10 @@ void enqueue(){
 
 }
 
+int dequeue(){
+  
+}
+
 int main(){
   return 0;
 }
