@@ -7,7 +7,7 @@ typedef struct node{
 }str;
 str *ptr,*start='\0',*front=NULL,*rear=NULL;
 
-void enqueue(){
+void enqueue(int x){
 
 }
 
