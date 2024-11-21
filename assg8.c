@@ -199,3 +199,75 @@ void displayList() {
     }
     printf("\n");
 }
+
+int main() {
+    int choice, data, value;
+    create_list();
+    while (1) {
+        printf("\nMenu:\n");
+        printf("1. Insert at beginning\n");
+        printf("2. Insert at end\n");
+        printf("3. Insert after a value\n");
+        printf("4. Insert before a value\n");
+        printf("5. Delete at beginning\n");
+        printf("6. Delete at end\n");
+        printf("7. Delete after a value\n");
+        printf("8. Delete before a value\n");
+        printf("9. Display list\n");
+        printf("10. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertAtBeginning(data);
+                break;
+            case 2:
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertAtEnd(data);
+                break;
+            case 3:
+                printf("Enter value to insert after: ");
+                scanf("%d", &value);
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertAfterValue(value, data);
+                break;
+            case 4:
+                printf("Enter value to insert before: ");
+                scanf("%d", &value);
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertBeforeValue(value, data);
+                break;
+            case 5:
+                deleteAtBeginning();
+                break;
+            case 6:
+                deleteAtEnd();
+                break;
+            case 7:
+                printf("Enter value to delete after: ");
+                scanf("%d", &value);
+                deleteAfterValue(value);
+                break;
+            case 8:
+                printf("Enter value to delete before: ");
+                scanf("%d", &value);
+                deleteBeforeValue(value);
+                break;
+            case 9:
+                displayList();
+                break;
+            case 10:
+                exit(0);
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+
+    return 0;
+}
