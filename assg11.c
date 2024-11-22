@@ -22,3 +22,43 @@ struct Node *pop(struct Node *top,int *pvalue){
     free(temp);
     return top;    
 }
+
+int evaluate(char *exp){
+    struct Node *stack=NULL;
+    for(int i=0;exp[i]!='\0';i++){
+        if(isdigit(exp[i])){
+            stack=push(stack,exp[i]-'0');
+        }
+        else{
+            int op1,op2;
+            stack=pop(stack,&op2);
+            stack=pop(stack,&op1);
+            switch(exp[i]){
+                case '+':
+                    stack=push(stack,op1+op2);
+                    break;
+                case '-':
+                    stack=push(stack,op1-op2);
+                    break;
+                case '*':
+                    stack=push(stack,op1*op2);
+                    break;
+                case '/':
+                    stack=push(stack,op1/op2);
+                    break;
+                case '%':
+                    stack=push(stack,op1%op2);
+                    break;
+                case '^':
+                    stack=push(stack,op1^op2);
+                    break;
+                default:
+                    printf("Invalid Operation: %c\n",exp[i]);
+                    return -1;                        
+            }
+        }
+    }
+    int res;
+    stack=pop(stack,&res);
+    return res;
+}
