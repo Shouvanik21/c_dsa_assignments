@@ -14,3 +14,11 @@ struct Node *push(struct Node *top,int value){
     top=newNode;
     return top;
 }
+
+struct Node *pop(struct Node *top,int *pvalue){
+    *pvalue=top->data;
+    struct Node *temp=top;
+    top=top->next;
+    free(temp);
+    return top;    
+}
