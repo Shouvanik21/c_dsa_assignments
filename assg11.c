@@ -62,3 +62,12 @@ int evaluate(char *exp){
     stack=pop(stack,&res);
     return res;
 }
+
+int main(){
+    char exp[100];
+    printf("enter the postfix expression:");
+    gets(exp);
+    int res=evaluate(exp);
+    printf("Result: %d\n",res);
+    return 0;
+}
