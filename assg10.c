@@ -65,18 +65,18 @@ int main()
  			pop();
  			break;
  		case '^':
- 	    case '/':
- 	    case '*':
- 	    case '%':
- 	    case '+':
- 	    case '-':
- 	    	if(top!=NULL)
- 	    	while(precedence(top->data)>=precedence(infix[i]))
- 	    	{
- 	    		postfix[j++]=pop();
- 	    	}
- 	    	push(infix[i]);
- 	    	break;
+	 	case '/':
+	 	case '*':
+	 	case '%':
+	 	case '+':
+	 	case '-':
+	 	    	if(top!=NULL)
+	 	    	while(precedence(top->data)>=precedence(infix[i]))
+	 	    	{
+	 	    		postfix[j++]=pop();
+	 	    	}
+	 	    	push(infix[i]);
+	 	    	break;
  	    default:
  	    		postfix[j++]=infix[i];
  	    		break;
