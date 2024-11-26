@@ -77,7 +77,7 @@ int main()
 	 	    	}
 	 	    	push(infix[i]);
 	 	    	break;
- 	    default:
+ 	    	default:
  	    		postfix[j++]=infix[i];
  	    		break;
  	    }
