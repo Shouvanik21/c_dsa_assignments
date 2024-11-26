@@ -12,7 +12,7 @@ struct node *ptr,*stack,*top=NULL;
 int val,k;
 void push(char val)
 {
-    ptr=(struct node*)malloc(sizeof(struct node));
+    	ptr=(struct node*)malloc(sizeof(struct node));
 	ptr->data=val;
 	ptr->next=top;
 	top=ptr;
@@ -42,7 +42,7 @@ int precedence(char x)
     }
 }
 
-void main()
+int main()
 {
  	char infix[20],postfix[20];
  	printf("Enter infix expression: ");
