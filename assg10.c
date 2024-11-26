@@ -87,4 +87,5 @@ int main()
  		postfix[j++]=pop();
  	postfix[j]='\0';
  	puts(postfix);
+	return 0;
 }
