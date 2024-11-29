@@ -62,3 +62,42 @@ void inorder(struct node* ptr)
 		inorder(ptr->right);
 	}
 }
+
+int main()
+{
+	int ch,key,i,n;
+	struct node* root=NULL;
+	printf("Enter the number of keys to be stored:");
+	scanf("%d",&n);
+	printf("Enter key to insert: ");
+	for(i=0;i<n;i++)
+	{
+			       scanf("%d",&key);
+				   root=insert(root,key);
+	}
+	printf("\nMenu:\n");
+        printf("1. PREORDER\n");
+        printf("2. INORDER\n");
+        printf("3. POSTORDER\n");
+        printf("4. Exit\n");
+	while(1)
+	{
+        printf("\nEnter your choice: ");
+        scanf("%d", &ch);
+		switch(ch)
+		{
+			case 1:
+			preorder(root);
+			       break;
+			case 2:
+			inorder(root);
+			       break;
+			case 3:
+			postorder(root);
+			       break;	   	   	   
+			case 4:
+			exit(0);       
+		}
+	}
+	return 0;
+}
