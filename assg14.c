@@ -24,3 +24,13 @@ struct node* insert(struct node* ptr,int key)
 		ptr->right=insert(ptr->right,key);
 	return ptr;	
 }
+
+void preorder(struct node* ptr)
+{
+	if(ptr!=NULL)
+	{
+		printf("%d \t",ptr->data);
+		preorder(ptr->left);
+		preorder(ptr->right);
+	}
+}
