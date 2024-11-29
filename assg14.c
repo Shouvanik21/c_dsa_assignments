@@ -34,3 +34,21 @@ void preorder(struct node* ptr)
 		preorder(ptr->right);
 	}
 }
+
+void postorder(struct node* ptr)
+{
+	if(ptr!=NULL)
+	{
+		postorder(ptr->left);
+		postorder(ptr->right);
+		printf("%d \t",ptr->data);
+	}
+}void postorder(struct node* ptr)
+{
+	if(ptr!=NULL)
+	{
+		postorder(ptr->left);
+		postorder(ptr->right);
+		printf("%d \t",ptr->data);
+	}
+}
