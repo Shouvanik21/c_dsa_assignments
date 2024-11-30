@@ -25,3 +25,18 @@ void insert(struct Node *hashTable, int key, int value) {
     hashTable[index].key = key;
     hashTable[index].value = value;
 }
+
+int search(struct Node *hashTable, int key) {
+    int index = hash(key);
+    int i = 0;
+
+    while (hashTable[index].key != 0) {
+        if (hashTable[index].key == key) {
+            return hashTable[index].value;
+        }
+        index = (index + i) % SIZE;
+        i++;
+    }
+
+    return -1; // Key not found
+}
