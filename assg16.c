@@ -8,3 +8,7 @@ struct Node {
     int key;
     int value;
 };
+
+int hash(int key) {
+    return key % SIZE;
+}
