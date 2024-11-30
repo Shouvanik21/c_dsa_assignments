@@ -67,3 +67,52 @@ void display(struct Node *hashTable) {
         }
     }
 }
+
+int main() {
+    struct Node hashTable[SIZE];
+    int choice, key, value;
+
+    // Initialize hash table
+    for (int i = 0; i < SIZE; i++) {
+        hashTable[i].key = 0;
+        hashTable[i].value = 0;
+    }
+
+    while (1) {
+        printf("\n1. Insert\n2. Search\n3. Delete\n4. Display\n5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter key and value: ");
+                scanf("%d %d", &key, &value);
+                insert(hashTable, key, value);
+                break;
+            case 2:
+                printf("Enter key to search: ");
+                scanf("%d", &key);
+                value = search(hashTable, key);
+                if (value == -1) {
+                    printf("Key not found\n");
+                } else {
+                    printf("Value: %d\n", value);
+                }
+                break;
+            case 3:
+                printf("Enter key to delete: ");
+                scanf("%d", &key);
+                delete(hashTable, key);
+                break;
+            case 4:
+                display(hashTable);
+                break;
+            case 5:
+                exit(0);
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+
+    return 0;
+}
