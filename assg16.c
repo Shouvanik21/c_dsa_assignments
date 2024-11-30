@@ -55,3 +55,15 @@ void delete(struct Node *hashTable, int key) {
         i++;
     }
 }
+
+void display(struct Node *hashTable) {
+    printf("\nHash Table:\n");
+    for (int i = 0; i < SIZE; i++) {
+        printf("Index %d: ", i);
+        if (hashTable[i].key == 0) {
+            printf("Empty\n");
+        } else {
+            printf("Key: %d, Value: %d\n", hashTable[i].key, hashTable[i].value);
+        }
+    }
+}
