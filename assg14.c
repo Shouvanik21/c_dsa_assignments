@@ -72,8 +72,8 @@ int main()
 	printf("Enter key to insert: ");
 	for(i=0;i<n;i++)
 	{
-			       scanf("%d",&key);
-				   root=insert(root,key);
+		scanf("%d",&key);
+		root=insert(root,key);
 	}
 	printf("\nMenu:\n");
         printf("1. PREORDER\n");
