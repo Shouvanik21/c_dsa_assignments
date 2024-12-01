@@ -87,16 +87,18 @@ int main()
 		switch(ch)
 		{
 			case 1:
-			preorder(root);
-			       break;
+				preorder(root);
+			       	break;
 			case 2:
-			inorder(root);
-			       break;
+				inorder(root);
+			       	break;
 			case 3:
-			postorder(root);
-			       break;	   	   	   
+				postorder(root);
+			       	break;	   	   	   
 			case 4:
-			exit(0);       
+				exit(0);
+			default:
+				printf("\nInvalid Choice");
 		}
 	}
 	return 0;
