@@ -43,16 +43,7 @@ void postorder(struct node* ptr)
 		postorder(ptr->right);
 		printf("%d \t",ptr->data);
 	}
-}void postorder(struct node* ptr)
-{
-	if(ptr!=NULL)
-	{
-		postorder(ptr->left);
-		postorder(ptr->right);
-		printf("%d \t",ptr->data);
-	}
 }
-
 void inorder(struct node* ptr)
 {
 	if(ptr!=NULL)
